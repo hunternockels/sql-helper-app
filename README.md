@@ -8,7 +8,7 @@ It allows users to write SQL queries, receive AI-generated feedback, and ask fol
 ## Features
 - 📝 SQL editor with syntax highlighting  
 - ✅ Instant feedback on queries  
-- 🤖 Built-in SQL help bot ("[Your Bot’s Name]")  
+- 🤖 Built-in SQL help bot ("SQL Sam")  
 - 🎨 Clean Streamlit interface  
 
 ---
