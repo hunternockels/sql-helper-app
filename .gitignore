@@ -1,0 +1,31 @@
+# Ignore environment variables
+.env
+
+# Bytecode and cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# macOS stuff
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
+
+# SQLite DB (if any)
+*.db
+
+# Streamlit temporary files
+.streamlit/
+
+# Python egg / build files
+build/
+dist/
+*.egg-info/
