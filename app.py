@@ -104,7 +104,7 @@ if st.button("Ask"):
             response = client.chat.completions.create(
                 model="gpt-4",
                 messages=[
-                    {"role": "system", "content": "You are a friendly SQL tutor. Explain things clearly and with examples."},
+                    {"role": "system", "content": f"You are a friendly SQL tutor. Explain things clearly and with examples, if the question is regarding their feedback from the previous problem, use {st.session_state.feedback}."},
                     *st.session_state.help_history
                 ]
             )
