@@ -33,7 +33,7 @@ if st.button("🎯 New SQL Question"):
     with st.spinner("Generating SQL question..."):
         prompt = f"Give me one {difficulty.lower()} SQL practice question. Just the question, no answer. Make it practical and realistic."
         response = client.chat.completions.create(
-            model="gpt-5",
+            model="gpt-4",
             messages=[
                 {"role": "system", "content": "You are a SQL tutor who gives practical, technical SQL questions based on difficulty level."},
                 {"role": "user", "content": prompt}
@@ -61,7 +61,7 @@ if st.session_state.sql_question:
         else:
             with st.spinner("Evaluating your answer..."):
                 feedback_response = client.chat.completions.create(
-                    model="gpt-5",
+                    model="gpt-4",
                     messages=[
                         {"role": "system", "content": "You are a SQL expert providing detailed feedback on students' answers. Be helpful, concise, and constructive."},
                         {"role": "user", "content": f"Here is the SQL question:\n{st.session_state.sql_question}\n\nHere is my answer:\n{st.session_state.user_answer}\n\nPlease give detailed feedback on correctness, logic, formatting, and improvements."}
@@ -102,7 +102,7 @@ if st.button("Ask"):
         # Send question to OpenAI
         with st.spinner("Thinking..."):
             response = client.chat.completions.create(
-                model="gpt-5",
+                model="gpt-4",
                 messages=[
                     {"role": "system", "content": "You are a friendly SQL tutor. Explain things clearly and with examples."},
                     *st.session_state.help_history
